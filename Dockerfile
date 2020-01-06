@@ -1,4 +1,4 @@
-# Shodan CLI Docker Container
+# K8s Jumpbox Container
 
 FROM ubuntu:18.04
 
