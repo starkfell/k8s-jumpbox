@@ -20,6 +20,7 @@ apt-transport-https \
 lsb-release \
 net-tools \
 iputils-ping \
+dnsutils \
 sshpass
 
 # Installing kubectl
