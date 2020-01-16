@@ -16,13 +16,14 @@ wget \
 git \
 unzip \
 expect \
+debconf-utils \
 apt-transport-https \
 lsb-release \
 net-tools \
 iputils-ping \
 dnsutils \
 sshpass \
-telnetd \
+telnet \
 tcpdump \
 nmap
 
