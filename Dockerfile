@@ -21,7 +21,10 @@ lsb-release \
 net-tools \
 iputils-ping \
 dnsutils \
-sshpass
+sshpass \
+telnetd \
+tcpdump \
+nmap
 
 # Installing kubectl
 RUN curl -s -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
