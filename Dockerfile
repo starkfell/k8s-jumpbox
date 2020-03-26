@@ -1,5 +1,3 @@
-# K8s Jumpbox Container
-
 FROM ubuntu:18.04
 
 MAINTAINER Ryan Irujo "starkfell.github.io"
@@ -32,4 +30,11 @@ RUN curl -s -LO https://storage.googleapis.com/kubernetes-release/release/$(curl
 chmod +x ./kubectl && \
 mv ./kubectl /usr/local/bin/kubectl
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+# Creating /kuard directory.
+RUN mkdir -p /kuard
+
+# Copying kuard binary to /kuard.
+COPY kuard-app/kuard /kuard
+
+# Starting kuard.
+ENTRYPOINT ["/kuard"]
