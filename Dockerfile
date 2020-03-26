@@ -36,5 +36,8 @@ RUN mkdir -p /kuard
 # Copying kuard binary to /kuard.
 COPY kuard-app/kuard /kuard
 
+# Making the kuard binary executable.
+RUN chmod +x /kuard/kuard
+
 # Starting kuard.
 ENTRYPOINT ["/kuard"]
