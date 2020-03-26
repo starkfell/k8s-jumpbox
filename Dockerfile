@@ -30,14 +30,11 @@ RUN curl -s -LO https://storage.googleapis.com/kubernetes-release/release/$(curl
 chmod +x ./kubectl && \
 mv ./kubectl /usr/local/bin/kubectl
 
-# Creating /kuard directory.
-RUN mkdir -p /kuard
-
-# Copying kuard binary to /kuard.
+# Copying kuard binary to '/' and making it executable.
 COPY kuard-app/kuard /kuard
+RUN chmod +x ./kuard
 
-# Making the kuard binary executable.
-RUN chmod +x /kuard/kuard
+EXPOSE 8080
 
 # Starting kuard.
 ENTRYPOINT ["/kuard"]
