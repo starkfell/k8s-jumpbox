@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Installing Prerequisites
 RUN apt-get update && \
 apt-get -y install \
+docker.io \
 vim \
 jq \
 curl \
