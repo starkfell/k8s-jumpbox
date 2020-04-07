@@ -33,7 +33,8 @@ RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor |
 AZ_REPO=$(lsb_release -cs) && \
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | tee /etc/apt/sources.list.d/azure-cli.list  && \
 apt-get update && \
-apt-get install -y azure-cli
+apt-get install -y --no-install-recommends \
+azure-cli
 
 # Installing kubectl
 RUN curl -s -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
