@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Installing Prerequisites
 RUN apt-get update && \
-apt-get -y install \
+apt-get -y install --no-install-recommends \
 docker.io \
 vim \
 jq \
